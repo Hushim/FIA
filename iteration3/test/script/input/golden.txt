@@ -1,0 +1,26 @@
+build/MIA/bin/MIA test-images/snaily.jpg -blur 5.0 blur-golden1.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -blur 5.0 blur-golden1.png
+build/MIA/bin/MIA test-images/snaily.jpg -blur 10.0 blur-golden2.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -blur 10.0 blur-golden2.png
+build/MIA/bin/MIA test-images/snaily.jpg -edge edge-detect-golden1.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -edge  edge-detect-golden1.png
+build/MIA/bin/MIA test-images/snaily.jpg -threshold 0.1 threshold-golden1.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -threshold 0.1 threshold-golden1.png
+build/MIA/bin/MIA test-images/snaily.jpg -threshold 0.8 threshold-golden2.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -threshold 0.8 threshold-golden2.png
+build/MIA/bin/MIA test-images/snaily.jpg -threshold 1.0 threshold-golden3.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -threshold 1.0 threshold-golden3.png
+build/MIA/bin/MIA test-images/snaily.jpg -saturate 1 saturate-golden1.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -saturate -1 saturate-golden1.png
+build/MIA/bin/MIA test-images/snaily.jpg -saturate 0 saturate-golden2.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -saturate 0 saturate-golden2.png
+build/MIA/bin/MIA test-images/snaily.jpg -saturate 2 saturate-golden3.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -saturate 2 saturate-golden3.png
+build/MIA/bin/MIA test-images/snaily.jpg -quantize 2 quantize-golden1.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -quantize 2 quantize-golden1.png
+build/MIA/bin/MIA test-images/snaily.jpg -quantize 4 quantize-golden2.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -quantize 4 quantize-golden2.png
+build/MIA/bin/MIA test-images/snaily.jpg -sharpen 5 sharpen-golden1.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -sharpen 5 sharpen-golden1.png
+build/MIA/bin/MIA test-images/snaily.jpg -sharpen 10 sharpen-golden2.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -sharpen 10 sharpen-golden2.png

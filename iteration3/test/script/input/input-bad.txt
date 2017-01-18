@@ -1,0 +1,10 @@
+build/MIA/bin/MIA test-images/snaily.foo bad-input-extension.jpg
+build/MIA/bin/MIA does/not/exist.jpg does-not-exist.jpg
+build/MIA/bin/MIA test-images/colorCircles.png color-circles.foo
+build/MIA/bin/MIA test-images/colorCircles.png does/not/exist.png
+build/MIA/bin/MIA -sharpen 5.0 missing-input-file.png
+build/MIA/bin/MIA test-images/snaily.jpg -sharpen 5.0
+build/MIA/bin/MIA test-images/snaily.jpg -compare 17 test-images/snaily.jpg
+build/MIA/bin/MIA test-images/snaily.jpg -channel 1.0 1.0 bad-channel-parameters.png
+build/MIA/bin/MIA test-images/snaily.jpg -edge 5.0 bad-edge-parameters.png
+build/MIA/bin/MIA test-images/brainstack/mr-brain-8bit###.png bad-brainstack2/mr-brain8bit##.png

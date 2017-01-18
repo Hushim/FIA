@@ -1,0 +1,3 @@
+build/MIA/bin/MIA test-images/brainstack/mrbrain-8bit###.png -edge brainstack-edge/###.png
+build/MIA/bin/MIA test-images/brainstack/mrbrain-8bit###.png -quantize 3 brainstack-quantize/###.png
+build/MIA/bin/MIA test-images/brainstack/mrbrain-8bit###.png -compare test-images/brainstack/mrbrain-8bit###.png

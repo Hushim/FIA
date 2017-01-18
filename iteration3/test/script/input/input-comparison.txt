@@ -1,0 +1,8 @@
+build/MIA/bin/MIA test-images/snaily.jpg -compare test-images/snaily.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -compare test-images/colorCircles.png
+build/MIA/bin/MIA test-images/colorCircles.png -blur 1.0 compare1.png
+build/MIA/bin/MIA test-images/colorCircles.png -blur 1.0 compare2.png
+build/MIA/bin/MIA compare1.png -compare compare2.png
+build/MIA/bin/MIA test-images/snaily.jpg -blur 1.0 compare1.jpg
+build/MIA/bin/MIA test-images/snaily.jpg -blur 1.0 compare2.jpg
+build/MIA/bin/MIA compare1.jpg -compare compare2.jpg

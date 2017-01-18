@@ -1,0 +1,141 @@
+\hypertarget{classimage__tools_1_1MIACmdApp}{}\section{image\+\_\+tools\+:\+:M\+I\+A\+Cmd\+App Class Reference}
+\label{classimage__tools_1_1MIACmdApp}\index{image\+\_\+tools\+::\+M\+I\+A\+Cmd\+App@{image\+\_\+tools\+::\+M\+I\+A\+Cmd\+App}}
+
+
+image processing application without gui  
+
+
+
+
+{\ttfamily \#include $<$mia\+\_\+app\+\_\+cmd.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1MIACmdApp_a24424ebe39fb3f9c3dc9f113697212fa}{M\+I\+A\+Cmd\+App} ()\hypertarget{classimage__tools_1_1MIACmdApp_a24424ebe39fb3f9c3dc9f113697212fa}{}\label{classimage__tools_1_1MIACmdApp_a24424ebe39fb3f9c3dc9f113697212fa}
+
+\begin{DoxyCompactList}\small\item\em construct an \hyperlink{classimage__tools_1_1MIACmdApp}{M\+I\+A\+Cmd\+App} object \end{DoxyCompactList}\item 
+int \hyperlink{classimage__tools_1_1MIACmdApp_ab5788e29212e4010921ac67ba83af38b}{parse\+\_\+command\+\_\+line} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em \+: parse command line and execute based on flags \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries cmd\+\_\+init} (char $\ast$img\+\_\+name)\hypertarget{classimage__tools_1_1MIACmdApp_a278267a85ee24a43f9775a3aa3aa7974}{}\label{classimage__tools_1_1MIACmdApp_a278267a85ee24a43f9775a3aa3aa7974}
+
+\item 
+void {\bfseries display\+\_\+command\+\_\+lines} ()\hypertarget{classimage__tools_1_1MIACmdApp_a8705f454be7f96ff4dc751b7e7aa3e91}{}\label{classimage__tools_1_1MIACmdApp_a8705f454be7f96ff4dc751b7e7aa3e91}
+
+\item 
+bool {\bfseries is\+\_\+number} (char $\ast$str)\hypertarget{classimage__tools_1_1MIACmdApp_aeb761ff8f0d22139d805deb758510633}{}\label{classimage__tools_1_1MIACmdApp_aeb761ff8f0d22139d805deb758510633}
+
+\item 
+int {\bfseries check\+\_\+floor\+\_\+ceiling} (float parameter\+\_\+, float floor\+\_\+, float ceiling\+\_\+)\hypertarget{classimage__tools_1_1MIACmdApp_a757960fe6adf721f5fe90220fdedf6fc}{}\label{classimage__tools_1_1MIACmdApp_a757960fe6adf721f5fe90220fdedf6fc}
+
+\item 
+int {\bfseries is\+\_\+flag} (std\+::string opt)\hypertarget{classimage__tools_1_1MIACmdApp_a09dedce23bb09218241a712c1fd45588}{}\label{classimage__tools_1_1MIACmdApp_a09dedce23bb09218241a712c1fd45588}
+
+\item 
+bool {\bfseries if\+\_\+img\+\_\+exist} (std\+::string filename)\hypertarget{classimage__tools_1_1MIACmdApp_a0636ec4d010bc30a65121c18fee567a6}{}\label{classimage__tools_1_1MIACmdApp_a0636ec4d010bc30a65121c18fee567a6}
+
+\item 
+int {\bfseries is\+\_\+img\+\_\+valid} (std\+::string filename)\hypertarget{classimage__tools_1_1MIACmdApp_a6229c0ac9bb196b48b7c34a681523424}{}\label{classimage__tools_1_1MIACmdApp_a6229c0ac9bb196b48b7c34a681523424}
+
+\item 
+void {\bfseries apply\+\_\+filter} (int flag\+\_\+number, float $\ast$param)\hypertarget{classimage__tools_1_1MIACmdApp_ab46f6f07d8bda622fbfb609236495fdd}{}\label{classimage__tools_1_1MIACmdApp_ab46f6f07d8bda622fbfb609236495fdd}
+
+\item 
+void {\bfseries save\+\_\+img} (std\+::string filename, int type)\hypertarget{classimage__tools_1_1MIACmdApp_a5c38e0afc7a8aad284fb1f3d539cfc73}{}\label{classimage__tools_1_1MIACmdApp_a5c38e0afc7a8aad284fb1f3d539cfc73}
+
+\item 
+bool {\bfseries pixel\+\_\+compare} (\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} p1, \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} p2)\hypertarget{classimage__tools_1_1MIACmdApp_a6d1305708716f615406cebae12c4e969}{}\label{classimage__tools_1_1MIACmdApp_a6d1305708716f615406cebae12c4e969}
+
+\item 
+void {\bfseries canvas\+\_\+compare} ()\hypertarget{classimage__tools_1_1MIACmdApp_a9610ce985357ba2735e0016b10712805}{}\label{classimage__tools_1_1MIACmdApp_a9610ce985357ba2735e0016b10712805}
+
+\item 
+void {\bfseries load\+\_\+img} (std\+::string filename, int type, bool input)\hypertarget{classimage__tools_1_1MIACmdApp_a1f481d87f3b14f58f0e38896b3bb0567}{}\label{classimage__tools_1_1MIACmdApp_a1f481d87f3b14f58f0e38896b3bb0567}
+
+\item 
+bool {\bfseries load\+\_\+input} (std\+::string filename)\hypertarget{classimage__tools_1_1MIACmdApp_a72a1dc4a09051134a018f0a397f1a69a}{}\label{classimage__tools_1_1MIACmdApp_a72a1dc4a09051134a018f0a397f1a69a}
+
+\item 
+bool {\bfseries load\+\_\+compare} (std\+::string filename)\hypertarget{classimage__tools_1_1MIACmdApp_a27a55aa62b219fe8a1d665bf32571eae}{}\label{classimage__tools_1_1MIACmdApp_a27a55aa62b219fe8a1d665bf32571eae}
+
+\item 
+bool {\bfseries save\+\_\+output} (std\+::string filename)\hypertarget{classimage__tools_1_1MIACmdApp_a4cb9833d17079d470eecba973616eceb}{}\label{classimage__tools_1_1MIACmdApp_a4cb9833d17079d470eecba973616eceb}
+
+\item 
+bool {\bfseries float\+\_\+compare} (float a, float b)\hypertarget{classimage__tools_1_1MIACmdApp_a4564cb46a28938086ade063377ceb467}{}\label{classimage__tools_1_1MIACmdApp_a4564cb46a28938086ade063377ceb467}
+
+\item 
+std\+::string {\bfseries find\+\_\+dir} (std\+::string filename)\hypertarget{classimage__tools_1_1MIACmdApp_a9be7a9dd13a3c85c81d1bc219db77f6f}{}\label{classimage__tools_1_1MIACmdApp_a9be7a9dd13a3c85c81d1bc219db77f6f}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries flags} \mbox{[}9\mbox{]}
+\item 
+\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$ {\bfseries display\+\_\+buffer\+\_\+}\hypertarget{classimage__tools_1_1MIACmdApp_a28e465144094f88d0db6bc596a94bb2b}{}\label{classimage__tools_1_1MIACmdApp_a28e465144094f88d0db6bc596a94bb2b}
+
+\item 
+std\+::vector$<$ \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$ $>$ {\bfseries buffer\+\_\+vec}\hypertarget{classimage__tools_1_1MIACmdApp_a179bf50782f4a0bfa2fa03fc09dfdc00}{}\label{classimage__tools_1_1MIACmdApp_a179bf50782f4a0bfa2fa03fc09dfdc00}
+
+\item 
+std\+::vector$<$ std\+::string $>$ {\bfseries img\+\_\+name\+\_\+vec}\hypertarget{classimage__tools_1_1MIACmdApp_abdfd222ce0ebb08ba8d3839d0dca5b75}{}\label{classimage__tools_1_1MIACmdApp_abdfd222ce0ebb08ba8d3839d0dca5b75}
+
+\item 
+std\+::vector$<$ \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$ $>$ {\bfseries compare\+\_\+vec}\hypertarget{classimage__tools_1_1MIACmdApp_a3e8648ada7a876c909a134fa2efe3efd}{}\label{classimage__tools_1_1MIACmdApp_a3e8648ada7a876c909a134fa2efe3efd}
+
+\item 
+\hyperlink{classimage__tools_1_1MIAIOManager}{M\+I\+A\+I\+O\+Manager} {\bfseries mia\+\_\+io\+\_\+manager\+\_\+}\hypertarget{classimage__tools_1_1MIACmdApp_ac7f45dcb57324b0531cdbd5d0ad0a6cd}{}\label{classimage__tools_1_1MIACmdApp_ac7f45dcb57324b0531cdbd5d0ad0a6cd}
+
+\item 
+std\+::string {\bfseries next\+\_\+file\+\_\+name\+\_\+}\hypertarget{classimage__tools_1_1MIACmdApp_a80231f9e545a5b698a736a0f688e6337}{}\label{classimage__tools_1_1MIACmdApp_a80231f9e545a5b698a736a0f688e6337}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+image processing application without gui 
+
+\subsection{Member Function Documentation}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Cmd\+App@{image\+\_\+tools\+::\+M\+I\+A\+Cmd\+App}!parse\+\_\+command\+\_\+line@{parse\+\_\+command\+\_\+line}}
+\index{parse\+\_\+command\+\_\+line@{parse\+\_\+command\+\_\+line}!image\+\_\+tools\+::\+M\+I\+A\+Cmd\+App@{image\+\_\+tools\+::\+M\+I\+A\+Cmd\+App}}
+\subsubsection[{\texorpdfstring{parse\+\_\+command\+\_\+line(int argc, char $\ast$argv[])}{parse_command_line(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int image\+\_\+tools\+::\+M\+I\+A\+Cmd\+App\+::parse\+\_\+command\+\_\+line (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{classimage__tools_1_1MIACmdApp_ab5788e29212e4010921ac67ba83af38b}{}\label{classimage__tools_1_1MIACmdApp_ab5788e29212e4010921ac67ba83af38b}
+
+
+\+: parse command line and execute based on flags 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arvc} & is the number of commands \\
+\hline
+{\em argv} & is the command line arguement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 when no error. error code otherwise. 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\index{image\+\_\+tools\+::\+M\+I\+A\+Cmd\+App@{image\+\_\+tools\+::\+M\+I\+A\+Cmd\+App}!flags@{flags}}
+\index{flags@{flags}!image\+\_\+tools\+::\+M\+I\+A\+Cmd\+App@{image\+\_\+tools\+::\+M\+I\+A\+Cmd\+App}}
+\subsubsection[{\texorpdfstring{flags}{flags}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string image\+\_\+tools\+::\+M\+I\+A\+Cmd\+App\+::flags\mbox{[}9\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1MIACmdApp_a5a427895cea253d9c477d617ef532680}{}\label{classimage__tools_1_1MIACmdApp_a5a427895cea253d9c477d617ef532680}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{\textcolor{stringliteral}{"-sharpen"}, \textcolor{stringliteral}{"-edge"}, \textcolor{stringliteral}{"-threshold"}, \textcolor{stringliteral}{"-blur"},
+                          \textcolor{stringliteral}{"-saturate"}, \textcolor{stringliteral}{"-channel"}, \textcolor{stringliteral}{"-quantize"}, \textcolor{stringliteral}{"-compare"}, \textcolor{stringliteral}{"-h"}\}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wuxx0687/\+Desktop/csci3081/repo-\/group-\/\+C04/iteration3/src/app/\+M\+I\+A/src/mia\+\_\+app\+\_\+cmd.\+h\item 
+/home/wuxx0687/\+Desktop/csci3081/repo-\/group-\/\+C04/iteration3/src/app/\+M\+I\+A/src/mia\+\_\+app\+\_\+cmd.\+cc\end{DoxyCompactItemize}

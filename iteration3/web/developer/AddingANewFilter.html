@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title> Adding a New Filter </title> 
+	<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+
+</head>
+<body>
+	<div class = "content">
+		<nav>
+			<a href ="../index.html" class = ""> Home</a> |
+			<a href = "../userpage.html" class = "link"> User Support </a> |
+			<a href = "../developerpage.html" class = "link"> Developer Support </a>
+		</nav>
+	</div>
+
+	<div class = "content">
+		<h1>Adding a New Filter Tutorial</h1>
+		<h3>Overview</h3>
+		<p>In both FlashPhoto and MIA applications, the filter feature allows user to apply various effect on photos. Within the application, two types of filters have been implemented: <b>Convolution-based filters</b> and <b>Pixel-independent filters</b>. Convolution-based filters require preservation of the current canvas when calculating each pixel in new canvas. Each convolution-based filter has a Kernel object, which is used to collect information from adjacent pixel. Pixel-independent filters contain attributes such as threshold or saturation, and operations are performed on each pixel independently based on these attributes.</p>
+		
+		<h3>Adding a new filter</h3>
+		<p> To create a new filter, you have to first decide which type of filters that you would like to create. You may refer to the code of the specfic type of filter if you get stuck. Saturation, Threshold, Quantize and Channels are pixel-independent filter examples that you might want to look at. Blur, Sharpen, Edge detection and Motion blur are convolution filters. Below is the example of how to create a pixel-independent filter.</p>
+		<p><b>Adding a non-convolution filter</b></p>
+		<p>Suppose we need to create a pixel-independent filter called invert. This filter performs the following conversion to all pixels in the canvas:<br>
+		<code><br>newColor's red   = 1 - oldColor's red
+			  <br>newColor's green = 1 - oldColor's green
+              <br>newColor's blue  = 1 - oldColor's blue</code></p>
+		<ol>
+			<li> Create f_convert.cc under src directory and a f_convert.h files under src/include directory.</li>
+			<li> In the f_convert.h file, include filter.h,  </li>
+			<pre><code>
+			 #include "include/filter.h" 
+                         #include "include/pixel_buffer.h"
+                         #include "include/color_data.h"</code></pre>
+			<li> Create new class called <code>FilterInvert</code> extending from Filter class in f_convert.cc</li>
+			<pre><code>#include "include/f_convert.h"
+				  <br>class FInvert : public Filter {
+                   <br>....
+           <br>}</code></pre>
+
+			<li> Create a new default and empty constructor for FilterInvert class in f_convert.cc</li>
+			<pre><code>FInvert::FInvert(void) {}</code></pre>
+			<li> Overwrite <code>set_color_data</code> method. In this example, for each of the three colors, subtract its value from 1 and set new color.</li>
+			<pre><code>void FInvert::set_color_data(ColorData * pixel) {
+						  pixel->red(1-pixel->red());
+						  pixel->blue(1-pixel->blue());
+						  pixel->green(1-pixel->green());
+						  return;
+						  }</code></pre>
+			<li> Use <code>apply_filter_to_photo</code> method, which is inherited from Filter class to apply its effects.</li>
+			<pre><code>Filter * invert_filter = new FInvert();
+			<br>invert_filter->apply_filter_to_photo(display_buffer);</code></pre>
+			<li> Add this new filter to the filter factory in filter_factory.cc.</li>
+			<pre><code>Filter*  FilterFactory::CreateFilter(int filter_id,
+                                     int param_count, ...) { 
+			<br>   switch (filter_id) {
+			<br>         ...
+
+			<br>      case FILTER INVERT:
+			<br>         f = new FInvert(va_arg(vl, int));       
+			<br>         break;
+			<br>         ...
+			<br>}
+			<br>}</code></pre>
+			<li>Add new switch case in Flashphoto.cc for GLUI control. </li>
+			<pre><code>void FlashPhotoApp::GluiControl(int control_id) {
+	  		<br>  switch (control_id) {
+	  		<br>	...
+	    	<br>    case UICtrl::UI_APPLY_INVERT:
+	      	<br>	 display_buffer_ = state_manager_.CommitState(display_buffer_);
+	      	<br>	 filter_manager_.ApplyInvert(&display_buffer_);
+	      	<br>	 break;
+	      	<br>		...
+            <br> }</code></pre>
+			<li>Add another GLUI panel to the list of current panels. Based on the filter that you created, define the intensity of the filter that you want to adjust. Some default values might also be needed if your filter requires this.</li>
+			<pre><code>
+			<br>GLUI_Panel* FilterManager::InitGlui(const GLUI *const glui, void (*s_gluicallback)(int)) {
+  					new GLUI_Column(const_cast<GLUI*>(glui), true);
+			<br>  GLUI_Panel *filter_panel = new GLUI_Panel(const_cast<GLUI*>(glui), "Filters");
+			<br>  {
+			<br>    GLUI_Panel *invert_panel = new GLUI_Panel(filter_panel, "Invert");
+			<br>    {
+			<br>      GLUI_Spinner * invert_amount = new GLUI_Spinner(invert_panel, "Amount:", &invert_amount_);
+			<br>      invert_amount->set_int_limits(0, 20);
+			<br>      invert_amount->set_int_val(5);
+			<br>      new GLUI_Button(blur_panel, "Apply", UICtrl::UI_APPLY_INVERT, s_gluicallback);
+			<br>	  ...
+            <br>   }
+			</code></pre>
+				
+			</code></pre>
+
+		</ol>
+		<p>Now you just successfully implement this new invert filter and it's ready to go!</p>
+	</div>
+	<div class = "footer">
+		<span class="copyright">&copy; 2016, CSCI 3081 Shimao Hu/ Zixiang Ma/ Zhouman Wu/ Mingya Ma</span>
+	</div>
+
+
+
+</body>
+</html>

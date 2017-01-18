@@ -1,0 +1,2 @@
+build/MIA/bin/MIA test-images/snaily.jpg -saturate 0 -threshold 0.8 -quantize 2 chained-saturate-threshold-quantize.jpg
+build/MIA/bin/MIA test-images/colorCircles.png -saturate 0 -threshold 0.8 -quantize 2 chained-saturate-threshold-quantize.png

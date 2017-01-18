@@ -1,0 +1,274 @@
+\hypertarget{classimage__tools_1_1FlashPhotoApp}{}\section{image\+\_\+tools\+:\+:Flash\+Photo\+App Class Reference}
+\label{classimage__tools_1_1FlashPhotoApp}\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+
+
+Inherits \hyperlink{classimage__tools_1_1BaseGfxApp}{image\+\_\+tools\+::\+Base\+Gfx\+App}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1FlashPhotoApp_ae86078388c8a06bae8e708ed15ea4638}{Flash\+Photo\+App} (int \hyperlink{classimage__tools_1_1BaseGfxApp_a2fe403c5392f624477c2ce4429f1a7b5}{width}, int \hyperlink{classimage__tools_1_1BaseGfxApp_aa961e13a7a8e6062204223cc33ac7503}{height})
+\item 
+virtual \hyperlink{classimage__tools_1_1FlashPhotoApp_ae30fa92a77c73bee5afac2fe21829a2e}{$\sim$\+Flash\+Photo\+App} (void)
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_abe6a6b7ac7664639d5208affe277f6ee}{Mouse\+Dragged} (int x, int y)
+\begin{DoxyCompactList}\small\item\em apply conrresponding tools to canvas while dragging mouse \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_abac618c1f5a236dc678674de050cd205}{Mouse\+Moved} (int x, int y)
+\begin{DoxyCompactList}\small\item\em do nothing when moving mouse \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a6ad65b17915b17d539bf82fb07710c7f}{Left\+Mouse\+Down} (int x, int y)
+\begin{DoxyCompactList}\small\item\em start applying tool actions to canvas \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_ab2fb593952915731ec50da0a4a20d097}{Left\+Mouse\+Up} (int x, int y)
+\begin{DoxyCompactList}\small\item\em record thr previoud mouse coordinates when lefing mouse up \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a3ee0b08c0e7096652ef8dc549a684f76}{Display} (void)\hypertarget{classimage__tools_1_1FlashPhotoApp_a3ee0b08c0e7096652ef8dc549a684f76}{}\label{classimage__tools_1_1FlashPhotoApp_a3ee0b08c0e7096652ef8dc549a684f76}
+
+\begin{DoxyCompactList}\small\item\em display \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a1cfe5fd1baf32a23264a6eff88987baf}{Glui\+Control} (int control\+\_\+id)
+\begin{DoxyCompactList}\small\item\em apply corresponding G\+UI controller action accoding to the controller id \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a1bf24fa1a123732fe5d5e1964974dec1}{Init} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]}, int x, int y, \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} background\+\_\+color)
+\begin{DoxyCompactList}\small\item\em Initialize the \hyperlink{classimage__tools_1_1FlashPhotoApp}{Flash\+Photo\+App}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a4d51fdabaff836fc55a4f72a465773e7}{update\+\_\+colors} (void)\hypertarget{classimage__tools_1_1FlashPhotoApp_a4d51fdabaff836fc55a4f72a465773e7}{}\label{classimage__tools_1_1FlashPhotoApp_a4d51fdabaff836fc55a4f72a465773e7}
+
+\begin{DoxyCompactList}\small\item\em Update the colors displayed on the G\+L\+UI control panel after updating their values in Flash\+Photo. \end{DoxyCompactList}\item 
+void {\bfseries Init\+Glui} (void)\hypertarget{classimage__tools_1_1FlashPhotoApp_a7e66fc64a72ba17648cb99491c773c9b}{}\label{classimage__tools_1_1FlashPhotoApp_a7e66fc64a72ba17648cb99491c773c9b}
+
+\item 
+void {\bfseries Init\+Graphics} (void)\hypertarget{classimage__tools_1_1FlashPhotoApp_ac529b21d6c3466ed1b40cc159b172d0d}{}\label{classimage__tools_1_1FlashPhotoApp_ac529b21d6c3466ed1b40cc159b172d0d}
+
+\item 
+void \hyperlink{classimage__tools_1_1FlashPhotoApp_a08e318814d7f7fb1aa2c05a61711f672}{Initialize\+Buffers} (\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} initial\+\_\+color, int \hyperlink{classimage__tools_1_1BaseGfxApp_a2fe403c5392f624477c2ce4429f1a7b5}{width}, int \hyperlink{classimage__tools_1_1BaseGfxApp_aa961e13a7a8e6062204223cc33ac7503}{height})\hypertarget{classimage__tools_1_1FlashPhotoApp_a08e318814d7f7fb1aa2c05a61711f672}{}\label{classimage__tools_1_1FlashPhotoApp_a08e318814d7f7fb1aa2c05a61711f672}
+
+\begin{DoxyCompactList}\small\item\em Initialize the buffers for the main window. \end{DoxyCompactList}\item 
+{\bfseries Flash\+Photo\+App} (const \hyperlink{classimage__tools_1_1FlashPhotoApp}{Flash\+Photo\+App} \&rhs)=delete\hypertarget{classimage__tools_1_1FlashPhotoApp_a3009fefcee5cd98e46e6b4dc3b3cf6be}{}\label{classimage__tools_1_1FlashPhotoApp_a3009fefcee5cd98e46e6b4dc3b3cf6be}
+
+\item 
+\hyperlink{classimage__tools_1_1FlashPhotoApp}{Flash\+Photo\+App} \& {\bfseries operator=} (const \hyperlink{classimage__tools_1_1FlashPhotoApp}{Flash\+Photo\+App} \&rhs)=delete\hypertarget{classimage__tools_1_1FlashPhotoApp_a9ecfbf7bd80d0ef20ba5cf6b61538699}{}\label{classimage__tools_1_1FlashPhotoApp_a9ecfbf7bd80d0ef20ba5cf6b61538699}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1FilterManager}{Filter\+Manager} \hyperlink{classimage__tools_1_1FlashPhotoApp_a9e101a91bb9f8c707d479bd4962ef775}{filter\+\_\+manager\+\_\+}\hypertarget{classimage__tools_1_1FlashPhotoApp_a9e101a91bb9f8c707d479bd4962ef775}{}\label{classimage__tools_1_1FlashPhotoApp_a9e101a91bb9f8c707d479bd4962ef775}
+
+\begin{DoxyCompactList}\small\item\em Manager for all filter operations. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1IOManager}{I\+O\+Manager} \hyperlink{classimage__tools_1_1FlashPhotoApp_a8529053e488dd3b0b7169763947eb794}{io\+\_\+manager\+\_\+}\hypertarget{classimage__tools_1_1FlashPhotoApp_a8529053e488dd3b0b7169763947eb794}{}\label{classimage__tools_1_1FlashPhotoApp_a8529053e488dd3b0b7169763947eb794}
+
+\begin{DoxyCompactList}\small\item\em Manager for all I/O operations. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1StateManager}{State\+Manager} \hyperlink{classimage__tools_1_1FlashPhotoApp_a0331ca8ddc87630ce3820448fe3f0840}{state\+\_\+manager\+\_\+}\hypertarget{classimage__tools_1_1FlashPhotoApp_a0331ca8ddc87630ce3820448fe3f0840}{}\label{classimage__tools_1_1FlashPhotoApp_a0331ca8ddc87630ce3820448fe3f0840}
+
+\begin{DoxyCompactList}\small\item\em Manager for redo/undo stack. \end{DoxyCompactList}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>GLUI\_Spinner $\ast$ {\bfseries spinner\_red}\\
+\>GLUI\_Spinner $\ast$ {\bfseries spinner\_green}\\
+\>GLUI\_Spinner $\ast$ {\bfseries spinner\_blue}\\
+\} \hyperlink{classimage__tools_1_1FlashPhotoApp_a006595306904df2bdb384fa7f57f8c44}{glui\_ctrl\_hooks\_}\hypertarget{classimage__tools_1_1FlashPhotoApp_a006595306904df2bdb384fa7f57f8c44}{}\label{classimage__tools_1_1FlashPhotoApp_a006595306904df2bdb384fa7f57f8c44}
+\\
+
+\end{tabbing}\begin{DoxyCompactList}\small\item\em A collection of G\+L\+UI spinners for R\+GB control elements. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$ \hyperlink{classimage__tools_1_1FlashPhotoApp_ad0a08d5606cfc5aa02412303147c612d}{display\+\_\+buffer\+\_\+}
+\item 
+int \hyperlink{classimage__tools_1_1FlashPhotoApp_a1aa3a6b34a072dd47f6b7ab150a52710}{cur\+\_\+tool\+\_\+}
+\item 
+\hyperlink{classimage__tools_1_1Tool}{Tool} $\ast$$\ast$ {\bfseries tools\+\_\+}\hypertarget{classimage__tools_1_1FlashPhotoApp_afbf9034065490150ebbda3b18ed997b2}{}\label{classimage__tools_1_1FlashPhotoApp_afbf9034065490150ebbda3b18ed997b2}
+
+\item 
+int {\bfseries mouse\+\_\+last\+\_\+x\+\_\+}\hypertarget{classimage__tools_1_1FlashPhotoApp_a02008fe44be326994e7983982d5f8b58}{}\label{classimage__tools_1_1FlashPhotoApp_a02008fe44be326994e7983982d5f8b58}
+
+\item 
+int {\bfseries mouse\+\_\+last\+\_\+y\+\_\+}\hypertarget{classimage__tools_1_1FlashPhotoApp_abd546ebc214dea88be2768d78466711f}{}\label{classimage__tools_1_1FlashPhotoApp_abd546ebc214dea88be2768d78466711f}
+
+\item 
+float {\bfseries cur\+\_\+color\+\_\+red\+\_\+}\hypertarget{classimage__tools_1_1FlashPhotoApp_a1f05e2dcc771bb2b915fe5713cafd06c}{}\label{classimage__tools_1_1FlashPhotoApp_a1f05e2dcc771bb2b915fe5713cafd06c}
+
+\item 
+float {\bfseries cur\+\_\+color\+\_\+green\+\_\+}\hypertarget{classimage__tools_1_1FlashPhotoApp_a06056579211bf21a52db97fdd9cd1729}{}\label{classimage__tools_1_1FlashPhotoApp_a06056579211bf21a52db97fdd9cd1729}
+
+\item 
+float {\bfseries cur\+\_\+color\+\_\+blue\+\_\+}\hypertarget{classimage__tools_1_1FlashPhotoApp_a87cfd54779dd53c6f4fd387984251ebc}{}\label{classimage__tools_1_1FlashPhotoApp_a87cfd54779dd53c6f4fd387984251ebc}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Flash\+Photo\+App@{Flash\+Photo\+App}}
+\index{Flash\+Photo\+App@{Flash\+Photo\+App}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection[{\texorpdfstring{Flash\+Photo\+App(int width, int height)}{FlashPhotoApp(int width, int height)}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Flash\+Photo\+App (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\hypertarget{classimage__tools_1_1FlashPhotoApp_ae86078388c8a06bae8e708ed15ea4638}{}\label{classimage__tools_1_1FlashPhotoApp_ae86078388c8a06bae8e708ed15ea4638}
+A constructor
+
+A constructor to construct \hyperlink{classimage__tools_1_1FlashPhotoApp}{Flash\+Photo\+App} \index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!````~Flash\+Photo\+App@{$\sim$\+Flash\+Photo\+App}}
+\index{````~Flash\+Photo\+App@{$\sim$\+Flash\+Photo\+App}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection[{\texorpdfstring{$\sim$\+Flash\+Photo\+App(void)}{~FlashPhotoApp(void)}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+tools\+::\+Flash\+Photo\+App\+::$\sim$\+Flash\+Photo\+App (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classimage__tools_1_1FlashPhotoApp_ae30fa92a77c73bee5afac2fe21829a2e}{}\label{classimage__tools_1_1FlashPhotoApp_ae30fa92a77c73bee5afac2fe21829a2e}
+A pure virtual deconstructor
+
+A pure virtual deconstructor to deconstruct \hyperlink{classimage__tools_1_1FlashPhotoApp}{Flash\+Photo\+App} 
+
+\subsection{Member Function Documentation}
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Glui\+Control@{Glui\+Control}}
+\index{Glui\+Control@{Glui\+Control}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection[{\texorpdfstring{Glui\+Control(int control\+\_\+id)}{GluiControl(int control_id)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Glui\+Control (
+\begin{DoxyParamCaption}
+\item[{int}]{control\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classimage__tools_1_1FlashPhotoApp_a1cfe5fd1baf32a23264a6eff88987baf}{}\label{classimage__tools_1_1FlashPhotoApp_a1cfe5fd1baf32a23264a6eff88987baf}
+
+
+apply corresponding G\+UI controller action accoding to the controller id 
+
+
+\begin{DoxyParams}{Parameters}
+{\em control\+\_\+id} & ID number of corresponding G\+UI control \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classimage__tools_1_1BaseGfxApp_a62fbfbb3b1f3e9d476e82c8e7640e78e}{image\+\_\+tools\+::\+Base\+Gfx\+App}.
+
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Init@{Init}}
+\index{Init@{Init}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection[{\texorpdfstring{Init(int argc, char $\ast$argv[], int x, int y, Color\+Data background\+\_\+color)}{Init(int argc, char *argv[], int x, int y, ColorData background_color)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Init (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{{\bf Color\+Data}}]{background\+\_\+color}
+\end{DoxyParamCaption}
+)}\hypertarget{classimage__tools_1_1FlashPhotoApp_a1bf24fa1a123732fe5d5e1964974dec1}{}\label{classimage__tools_1_1FlashPhotoApp_a1bf24fa1a123732fe5d5e1964974dec1}
+
+
+Initialize the \hyperlink{classimage__tools_1_1FlashPhotoApp}{Flash\+Photo\+App}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em argc} & Unused--required by \hyperlink{classimage__tools_1_1BaseGfxApp}{Base\+Gfx\+App} \\
+\hline
+\mbox{\tt in}  & {\em argv} & Unused--required by \hyperlink{classimage__tools_1_1BaseGfxApp}{Base\+Gfx\+App} \\
+\hline
+\mbox{\tt in}  & {\em x} & Unused--required by \hyperlink{classimage__tools_1_1BaseGfxApp}{Base\+Gfx\+App} \\
+\hline
+\mbox{\tt in}  & {\em y} & Unused--required by \hyperlink{classimage__tools_1_1BaseGfxApp}{Base\+Gfx\+App} \\
+\hline
+\mbox{\tt in}  & {\em background\+\_\+color} & The initial canvas color \\
+\hline
+\end{DoxyParams}
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Left\+Mouse\+Down@{Left\+Mouse\+Down}}
+\index{Left\+Mouse\+Down@{Left\+Mouse\+Down}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection[{\texorpdfstring{Left\+Mouse\+Down(int x, int y)}{LeftMouseDown(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Left\+Mouse\+Down (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classimage__tools_1_1FlashPhotoApp_a6ad65b17915b17d539bf82fb07710c7f}{}\label{classimage__tools_1_1FlashPhotoApp_a6ad65b17915b17d539bf82fb07710c7f}
+
+
+start applying tool actions to canvas 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & canvas coordinate \\
+\hline
+{\em y} & canvas coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classimage__tools_1_1BaseGfxApp_a329831f9843ed220fb8ec757f1e72b84}{image\+\_\+tools\+::\+Base\+Gfx\+App}.
+
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Left\+Mouse\+Up@{Left\+Mouse\+Up}}
+\index{Left\+Mouse\+Up@{Left\+Mouse\+Up}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection[{\texorpdfstring{Left\+Mouse\+Up(int x, int y)}{LeftMouseUp(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Left\+Mouse\+Up (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classimage__tools_1_1FlashPhotoApp_ab2fb593952915731ec50da0a4a20d097}{}\label{classimage__tools_1_1FlashPhotoApp_ab2fb593952915731ec50da0a4a20d097}
+
+
+record thr previoud mouse coordinates when lefing mouse up 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & canvas coordinate \\
+\hline
+{\em y} & canvas coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classimage__tools_1_1BaseGfxApp_a38e8246acf13e59f7d563e1bb479fdba}{image\+\_\+tools\+::\+Base\+Gfx\+App}.
+
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Mouse\+Dragged@{Mouse\+Dragged}}
+\index{Mouse\+Dragged@{Mouse\+Dragged}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection[{\texorpdfstring{Mouse\+Dragged(int x, int y)}{MouseDragged(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Mouse\+Dragged (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classimage__tools_1_1FlashPhotoApp_abe6a6b7ac7664639d5208affe277f6ee}{}\label{classimage__tools_1_1FlashPhotoApp_abe6a6b7ac7664639d5208affe277f6ee}
+
+
+apply conrresponding tools to canvas while dragging mouse 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & canvas coordinate \\
+\hline
+{\em y} & canvas coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classimage__tools_1_1BaseGfxApp_ac4fa9008fc0d0748c45e5bbe610efa45}{image\+\_\+tools\+::\+Base\+Gfx\+App}.
+
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!Mouse\+Moved@{Mouse\+Moved}}
+\index{Mouse\+Moved@{Mouse\+Moved}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection[{\texorpdfstring{Mouse\+Moved(int x, int y)}{MouseMoved(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+tools\+::\+Flash\+Photo\+App\+::\+Mouse\+Moved (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{classimage__tools_1_1FlashPhotoApp_abac618c1f5a236dc678674de050cd205}{}\label{classimage__tools_1_1FlashPhotoApp_abac618c1f5a236dc678674de050cd205}
+
+
+do nothing when moving mouse 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & canvas coordinate \\
+\hline
+{\em y} & canvas coordinate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classimage__tools_1_1BaseGfxApp_ab2aa4111469862051287ba2b9983224d}{image\+\_\+tools\+::\+Base\+Gfx\+App}.
+
+
+
+\subsection{Member Data Documentation}
+\index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!cur\+\_\+tool\+\_\+@{cur\+\_\+tool\+\_\+}}
+\index{cur\+\_\+tool\+\_\+@{cur\+\_\+tool\+\_\+}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection[{\texorpdfstring{cur\+\_\+tool\+\_\+}{cur_tool_}}]{\setlength{\rightskip}{0pt plus 5cm}int image\+\_\+tools\+::\+Flash\+Photo\+App\+::cur\+\_\+tool\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1FlashPhotoApp_a1aa3a6b34a072dd47f6b7ab150a52710}{}\label{classimage__tools_1_1FlashPhotoApp_a1aa3a6b34a072dd47f6b7ab150a52710}
+Currently selected tool from UI \index{image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}!display\+\_\+buffer\+\_\+@{display\+\_\+buffer\+\_\+}}
+\index{display\+\_\+buffer\+\_\+@{display\+\_\+buffer\+\_\+}!image\+\_\+tools\+::\+Flash\+Photo\+App@{image\+\_\+tools\+::\+Flash\+Photo\+App}}
+\subsubsection[{\texorpdfstring{display\+\_\+buffer\+\_\+}{display_buffer_}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Pixel\+Buffer}$\ast$ image\+\_\+tools\+::\+Flash\+Photo\+App\+::display\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1FlashPhotoApp_ad0a08d5606cfc5aa02412303147c612d}{}\label{classimage__tools_1_1FlashPhotoApp_ad0a08d5606cfc5aa02412303147c612d}
+Pointer to pixel data for the screen 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wuxx0687/\+Desktop/csci3081/repo-\/group-\/\+C04/iteration3/src/app/\+Flash\+Photo/src/include/flashphoto\+\_\+app.\+h\item 
+/home/wuxx0687/\+Desktop/csci3081/repo-\/group-\/\+C04/iteration3/src/app/\+Flash\+Photo/src/flashphoto\+\_\+app.\+cc\end{DoxyCompactItemize}

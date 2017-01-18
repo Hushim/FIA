@@ -1,0 +1,288 @@
+\hypertarget{classimage__tools_1_1ColorData}{}\section{image\+\_\+tools\+:\+:Color\+Data Class Reference}
+\label{classimage__tools_1_1ColorData}\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+
+
+This color data class stores color in floating point format.  
+
+
+
+
+{\ttfamily \#include $<$color\+\_\+data.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1ColorData_ab4e00138d402bad2c0edf24f0adc40e8}{Color\+Data} (void)\hypertarget{classimage__tools_1_1ColorData_ab4e00138d402bad2c0edf24f0adc40e8}{}\label{classimage__tools_1_1ColorData_ab4e00138d402bad2c0edf24f0adc40e8}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} consctructor. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1ColorData_ad64a66f681d0e502c2416e0bfcb86d14}{Color\+Data} (float r, float g, float b)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} consctructor. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1ColorData_a20782ba5f82e73e731b87311da1bcd56}{Color\+Data} (float r, float g, float b, float a)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} consctructor. \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1ColorData_a36d30e0a43563d120ec3533b878a7558}{red} (float r)
+\begin{DoxyCompactList}\small\item\em Mutator for red, gree, blue, and alpha. \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1ColorData_aaea99320f199dbdb36b87c82b8b5697d}{green} (float g)
+\begin{DoxyCompactList}\small\item\em Mutator for red, gree, blue, and alpha. \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1ColorData_ab9a4b4f7d983967c1c4105f9df1a60a8}{blue} (float b)
+\begin{DoxyCompactList}\small\item\em Mutator for red, gree, blue, and alpha. \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1ColorData_ad71793a20e4b2f654379ee79938b5ed2}{alpha} (float a)
+\begin{DoxyCompactList}\small\item\em Mutator for red, gree, blue, and alpha. \end{DoxyCompactList}\item 
+float \hyperlink{classimage__tools_1_1ColorData_a04fece12dab6d561a8fe5ac12f1c410d}{red} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor for red. \end{DoxyCompactList}\item 
+float \hyperlink{classimage__tools_1_1ColorData_a2dcb46013051c45a25386383e6d97e94}{green} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor for green. \end{DoxyCompactList}\item 
+float \hyperlink{classimage__tools_1_1ColorData_a3b27c4b8e5cf45c388e348fc01c3eeaf}{blue} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor blue. \end{DoxyCompactList}\item 
+float \hyperlink{classimage__tools_1_1ColorData_a8ae370ebb683fcfab1ce7dfdac9f78a2}{alpha} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor for alpha. \end{DoxyCompactList}\item 
+float \hyperlink{classimage__tools_1_1ColorData_a9bea35824e209d2c216739fdc8b9bf3f}{luminance} (void) const \hypertarget{classimage__tools_1_1ColorData_a9bea35824e209d2c216739fdc8b9bf3f}{}\label{classimage__tools_1_1ColorData_a9bea35824e209d2c216739fdc8b9bf3f}
+
+\begin{DoxyCompactList}\small\item\em Get the \char`\"{}brightness\char`\"{} of the color according to a perceptual metric that weights the red, green, and blue components of the color non-\/uniformly. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1ColorData_add7ac66b4e579f06f59f03c2206a0429}{clamped\+\_\+color} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a clamped version of a \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static float {\bfseries clamp\+\_\+value} (float input, float a, float b)\hypertarget{classimage__tools_1_1ColorData_ac9c19726be7a97e13b6916ed26822740}{}\label{classimage__tools_1_1ColorData_ac9c19726be7a97e13b6916ed26822740}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float {\bfseries red\+\_\+}\hypertarget{classimage__tools_1_1ColorData_a78160b930d95c4ece6913717de69d228}{}\label{classimage__tools_1_1ColorData_a78160b930d95c4ece6913717de69d228}
+
+\item 
+float {\bfseries green\+\_\+}\hypertarget{classimage__tools_1_1ColorData_aabfb09bb331483211b5b023a6870ea86}{}\label{classimage__tools_1_1ColorData_aabfb09bb331483211b5b023a6870ea86}
+
+\item 
+float {\bfseries blue\+\_\+}\hypertarget{classimage__tools_1_1ColorData_a8d44e8cd0701a5cd6fbee7fdb4d01309}{}\label{classimage__tools_1_1ColorData_a8d44e8cd0701a5cd6fbee7fdb4d01309}
+
+\item 
+float {\bfseries alpha\+\_\+}\hypertarget{classimage__tools_1_1ColorData_a7bc7d145ee17270baa2d17a03fa17c1e}{}\label{classimage__tools_1_1ColorData_a7bc7d145ee17270baa2d17a03fa17c1e}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} {\bfseries operator$\ast$} (const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&a, float f)\hypertarget{classimage__tools_1_1ColorData_adf9a770243996e50282d248a4327f351}{}\label{classimage__tools_1_1ColorData_adf9a770243996e50282d248a4327f351}
+
+\item 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} {\bfseries operator+} (const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&a, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&b)\hypertarget{classimage__tools_1_1ColorData_afee00faf26189979b72f3854a17200ae}{}\label{classimage__tools_1_1ColorData_afee00faf26189979b72f3854a17200ae}
+
+\item 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} {\bfseries operator-\/} (const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&a, const \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \&b)\hypertarget{classimage__tools_1_1ColorData_a799bd54f65a61569b5b968062ac0d37e}{}\label{classimage__tools_1_1ColorData_a799bd54f65a61569b5b968062ac0d37e}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This color data class stores color in floating point format. 
+
+The Red, Green, Blue, and Alpha channels range from 0.\+0 to 1.\+0. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!Color\+Data@{Color\+Data}}
+\index{Color\+Data@{Color\+Data}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection[{\texorpdfstring{Color\+Data(float r, float g, float b)}{ColorData(float r, float g, float b)}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+tools\+::\+Color\+Data\+::\+Color\+Data (
+\begin{DoxyParamCaption}
+\item[{float}]{r, }
+\item[{float}]{g, }
+\item[{float}]{b}
+\end{DoxyParamCaption}
+)}\hypertarget{classimage__tools_1_1ColorData_ad64a66f681d0e502c2416e0bfcb86d14}{}\label{classimage__tools_1_1ColorData_ad64a66f681d0e502c2416e0bfcb86d14}
+
+
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} consctructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & variable between 0 and 1 that represents red \\
+\hline
+{\em g} & variable between 0 and 1 that represents green \\
+\hline
+{\em b} & variable between 0 and 1 that represents blue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} object based on given input 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!Color\+Data@{Color\+Data}}
+\index{Color\+Data@{Color\+Data}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection[{\texorpdfstring{Color\+Data(float r, float g, float b, float a)}{ColorData(float r, float g, float b, float a)}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+tools\+::\+Color\+Data\+::\+Color\+Data (
+\begin{DoxyParamCaption}
+\item[{float}]{r, }
+\item[{float}]{g, }
+\item[{float}]{b, }
+\item[{float}]{a}
+\end{DoxyParamCaption}
+)}\hypertarget{classimage__tools_1_1ColorData_a20782ba5f82e73e731b87311da1bcd56}{}\label{classimage__tools_1_1ColorData_a20782ba5f82e73e731b87311da1bcd56}
+
+
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} consctructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & variable between 0 and 1 that represents red \\
+\hline
+{\em g} & variable between 0 and 1 that represents green \\
+\hline
+{\em b} & variable between 0 and 1 that represents blue \\
+\hline
+{\em a} & variable between 0 and 1 that represents intensity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} object based on given input 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!alpha@{alpha}}
+\index{alpha@{alpha}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection[{\texorpdfstring{alpha(float a)}{alpha(float a)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+tools\+::\+Color\+Data\+::alpha (
+\begin{DoxyParamCaption}
+\item[{float}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimage__tools_1_1ColorData_ad71793a20e4b2f654379ee79938b5ed2}{}\label{classimage__tools_1_1ColorData_ad71793a20e4b2f654379ee79938b5ed2}
+
+
+Mutator for red, gree, blue, and alpha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & represents the intensity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} object based on given input 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!alpha@{alpha}}
+\index{alpha@{alpha}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection[{\texorpdfstring{alpha(void) const }{alpha(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}float image\+\_\+tools\+::\+Color\+Data\+::alpha (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimage__tools_1_1ColorData_a8ae370ebb683fcfab1ce7dfdac9f78a2}{}\label{classimage__tools_1_1ColorData_a8ae370ebb683fcfab1ce7dfdac9f78a2}
+
+
+Accessor for alpha. 
+
+\begin{DoxyReturn}{Returns}
+A float variable between 0 and 1 that represents the color 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!blue@{blue}}
+\index{blue@{blue}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection[{\texorpdfstring{blue(float b)}{blue(float b)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+tools\+::\+Color\+Data\+::blue (
+\begin{DoxyParamCaption}
+\item[{float}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimage__tools_1_1ColorData_ab9a4b4f7d983967c1c4105f9df1a60a8}{}\label{classimage__tools_1_1ColorData_ab9a4b4f7d983967c1c4105f9df1a60a8}
+
+
+Mutator for red, gree, blue, and alpha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & variable between 0 -\/ 1 to represent the color blue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} object based on given input 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!blue@{blue}}
+\index{blue@{blue}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection[{\texorpdfstring{blue(void) const }{blue(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}float image\+\_\+tools\+::\+Color\+Data\+::blue (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimage__tools_1_1ColorData_a3b27c4b8e5cf45c388e348fc01c3eeaf}{}\label{classimage__tools_1_1ColorData_a3b27c4b8e5cf45c388e348fc01c3eeaf}
+
+
+Accessor blue. 
+
+\begin{DoxyReturn}{Returns}
+A float variable between 0 and 1 that represents the color 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!clamped\+\_\+color@{clamped\+\_\+color}}
+\index{clamped\+\_\+color@{clamped\+\_\+color}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection[{\texorpdfstring{clamped\+\_\+color(void) const }{clamped_color(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color\+Data} image\+\_\+tools\+::\+Color\+Data\+::clamped\+\_\+color (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}\hypertarget{classimage__tools_1_1ColorData_add7ac66b4e579f06f59f03c2206a0429}{}\label{classimage__tools_1_1ColorData_add7ac66b4e579f06f59f03c2206a0429}
+
+
+Return a clamped version of a \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} instance. 
+
+All colors and the alpha value are restricted to \mbox{[}0.\+0,1.\+0\mbox{]} \index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!green@{green}}
+\index{green@{green}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection[{\texorpdfstring{green(float g)}{green(float g)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+tools\+::\+Color\+Data\+::green (
+\begin{DoxyParamCaption}
+\item[{float}]{g}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimage__tools_1_1ColorData_aaea99320f199dbdb36b87c82b8b5697d}{}\label{classimage__tools_1_1ColorData_aaea99320f199dbdb36b87c82b8b5697d}
+
+
+Mutator for red, gree, blue, and alpha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & variable between 0 -\/ 1 to represent the color green \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} object based on given input 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!green@{green}}
+\index{green@{green}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection[{\texorpdfstring{green(void) const }{green(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}float image\+\_\+tools\+::\+Color\+Data\+::green (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimage__tools_1_1ColorData_a2dcb46013051c45a25386383e6d97e94}{}\label{classimage__tools_1_1ColorData_a2dcb46013051c45a25386383e6d97e94}
+
+
+Accessor for green. 
+
+\begin{DoxyReturn}{Returns}
+A float variable between 0 and 1 that represents the color 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!red@{red}}
+\index{red@{red}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection[{\texorpdfstring{red(float r)}{red(float r)}}]{\setlength{\rightskip}{0pt plus 5cm}void image\+\_\+tools\+::\+Color\+Data\+::red (
+\begin{DoxyParamCaption}
+\item[{float}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimage__tools_1_1ColorData_a36d30e0a43563d120ec3533b878a7558}{}\label{classimage__tools_1_1ColorData_a36d30e0a43563d120ec3533b878a7558}
+
+
+Mutator for red, gree, blue, and alpha. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & variable between 0 -\/ 1 to represent the color red \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} object based on given input 
+\end{DoxyReturn}
+\index{image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}!red@{red}}
+\index{red@{red}!image\+\_\+tools\+::\+Color\+Data@{image\+\_\+tools\+::\+Color\+Data}}
+\subsubsection[{\texorpdfstring{red(void) const }{red(void) const }}]{\setlength{\rightskip}{0pt plus 5cm}float image\+\_\+tools\+::\+Color\+Data\+::red (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classimage__tools_1_1ColorData_a04fece12dab6d561a8fe5ac12f1c410d}{}\label{classimage__tools_1_1ColorData_a04fece12dab6d561a8fe5ac12f1c410d}
+
+
+Accessor for red. 
+
+\begin{DoxyReturn}{Returns}
+A float variable between 0 and 1 that represents the color 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wuxx0687/\+Desktop/csci3081/repo-\/group-\/\+C04/iteration3/src/lib/libimgtools/src/include/color\+\_\+data.\+h\item 
+/home/wuxx0687/\+Desktop/csci3081/repo-\/group-\/\+C04/iteration3/src/lib/libimgtools/src/color\+\_\+data.\+cc\end{DoxyCompactItemize}

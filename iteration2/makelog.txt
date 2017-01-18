@@ -1,0 +1,2 @@
+g++ -O0 -g -W -Wall -Wextra -Weffc++ -Wshadow -Wfloat-equal -Wold-style-cast -Wswitch-default -std=gnu++11 -Wno-unused-parameter -I. -I./src -isystem./ext/glui/include -isystem./ext/jpeg-9a -isystem./ext/libpng-1.6.16 -fopenmp -c -o obj/filter.o src/filter.cc
+Makefile:252: recipe for target 'obj/filter.o' failed

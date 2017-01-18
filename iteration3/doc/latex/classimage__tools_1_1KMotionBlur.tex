@@ -1,0 +1,105 @@
+\hypertarget{classimage__tools_1_1KMotionBlur}{}\section{image\+\_\+tools\+:\+:K\+Motion\+Blur Class Reference}
+\label{classimage__tools_1_1KMotionBlur}\index{image\+\_\+tools\+::\+K\+Motion\+Blur@{image\+\_\+tools\+::\+K\+Motion\+Blur}}
+
+
+A directional motion blurring kernel.  
+
+
+
+
+{\ttfamily \#include $<$k\+\_\+motion\+\_\+blur.\+h$>$}
+
+
+
+Inherits \hyperlink{classimage__tools_1_1Kernel}{image\+\_\+tools\+::\+Kernel}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1KMotionBlur_a75b9862095f6df793defe84f13b339cb}{K\+Motion\+Blur} (float amount, enum \hyperlink{classimage__tools_1_1UICtrl_a56d4f68bf91302769d7bc453d8d57cee}{U\+I\+Ctrl\+::\+Motion\+Blur\+Direction})
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classimage__tools_1_1KMotionBlur_a1a453c33891327ff252ea69ea0478ba7}{get\+\_\+intensity} (int x, int y, float \hyperlink{classimage__tools_1_1Kernel_ac834d16a242dd4a15f5f5e4a6dacea01}{radius})
+\begin{DoxyCompactList}\small\item\em get the intensity from a specific position of a mask \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{classimage__tools_1_1KMotionBlur_ada21399075e72161c3b18bc488eb5eec}{amount\+\_\+}
+\begin{DoxyCompactList}\small\item\em The value to determine the degree of bluring. \end{DoxyCompactList}\item 
+int \hyperlink{classimage__tools_1_1KMotionBlur_ae0eaeda3f648c6d3a490fbd2ceedc8a0}{direction\+\_\+}
+\begin{DoxyCompactList}\small\item\em The derection when motionbluring . \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A directional motion blurring kernel. 
+
+Defines a kernel that blurs pixels along a straight line when convolved with an image. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{image\+\_\+tools\+::\+K\+Motion\+Blur@{image\+\_\+tools\+::\+K\+Motion\+Blur}!K\+Motion\+Blur@{K\+Motion\+Blur}}
+\index{K\+Motion\+Blur@{K\+Motion\+Blur}!image\+\_\+tools\+::\+K\+Motion\+Blur@{image\+\_\+tools\+::\+K\+Motion\+Blur}}
+\subsubsection[{\texorpdfstring{K\+Motion\+Blur(float amount, enum U\+I\+Ctrl\+::\+Motion\+Blur\+Direction)}{KMotionBlur(float amount, enum UICtrl::MotionBlurDirection)}}]{\setlength{\rightskip}{0pt plus 5cm}image\+\_\+tools\+::\+K\+Motion\+Blur\+::\+K\+Motion\+Blur (
+\begin{DoxyParamCaption}
+\item[{float}]{amount, }
+\item[{enum {\bf U\+I\+Ctrl\+::\+Motion\+Blur\+Direction}}]{direction}
+\end{DoxyParamCaption}
+)}\hypertarget{classimage__tools_1_1KMotionBlur_a75b9862095f6df793defe84f13b339cb}{}\label{classimage__tools_1_1KMotionBlur_a75b9862095f6df793defe84f13b339cb}
+A constructor
+
+A constructor to construct \hyperlink{classimage__tools_1_1KMotionBlur}{K\+Motion\+Blur} 
+
+\subsection{Member Function Documentation}
+\index{image\+\_\+tools\+::\+K\+Motion\+Blur@{image\+\_\+tools\+::\+K\+Motion\+Blur}!get\+\_\+intensity@{get\+\_\+intensity}}
+\index{get\+\_\+intensity@{get\+\_\+intensity}!image\+\_\+tools\+::\+K\+Motion\+Blur@{image\+\_\+tools\+::\+K\+Motion\+Blur}}
+\subsubsection[{\texorpdfstring{get\+\_\+intensity(int x, int y, float radius)}{get_intensity(int x, int y, float radius)}}]{\setlength{\rightskip}{0pt plus 5cm}float image\+\_\+tools\+::\+K\+Motion\+Blur\+::get\+\_\+intensity (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{float}]{radius}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classimage__tools_1_1KMotionBlur_a1a453c33891327ff252ea69ea0478ba7}{}\label{classimage__tools_1_1KMotionBlur_a1a453c33891327ff252ea69ea0478ba7}
+
+
+get the intensity from a specific position of a mask 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & the X coordinate of current mask on canvas \\
+\hline
+{\em y} & the Y coordinate of the current mask on canvas \\
+\hline
+{\em radius} & the radius of K\+Motion\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the intensity from the mask grid 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classimage__tools_1_1Kernel_a214a76e32ad4bedf68045f8df423689a}{image\+\_\+tools\+::\+Kernel}.
+
+
+
+\subsection{Member Data Documentation}
+\index{image\+\_\+tools\+::\+K\+Motion\+Blur@{image\+\_\+tools\+::\+K\+Motion\+Blur}!amount\+\_\+@{amount\+\_\+}}
+\index{amount\+\_\+@{amount\+\_\+}!image\+\_\+tools\+::\+K\+Motion\+Blur@{image\+\_\+tools\+::\+K\+Motion\+Blur}}
+\subsubsection[{\texorpdfstring{amount\+\_\+}{amount_}}]{\setlength{\rightskip}{0pt plus 5cm}float image\+\_\+tools\+::\+K\+Motion\+Blur\+::amount\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1KMotionBlur_ada21399075e72161c3b18bc488eb5eec}{}\label{classimage__tools_1_1KMotionBlur_ada21399075e72161c3b18bc488eb5eec}
+
+
+The value to determine the degree of bluring. 
+
+This controls how much to blur the canvas. \index{image\+\_\+tools\+::\+K\+Motion\+Blur@{image\+\_\+tools\+::\+K\+Motion\+Blur}!direction\+\_\+@{direction\+\_\+}}
+\index{direction\+\_\+@{direction\+\_\+}!image\+\_\+tools\+::\+K\+Motion\+Blur@{image\+\_\+tools\+::\+K\+Motion\+Blur}}
+\subsubsection[{\texorpdfstring{direction\+\_\+}{direction_}}]{\setlength{\rightskip}{0pt plus 5cm}int image\+\_\+tools\+::\+K\+Motion\+Blur\+::direction\+\_\+\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{classimage__tools_1_1KMotionBlur_ae0eaeda3f648c6d3a490fbd2ceedc8a0}{}\label{classimage__tools_1_1KMotionBlur_ae0eaeda3f648c6d3a490fbd2ceedc8a0}
+
+
+The derection when motionbluring . 
+
+This controls how the direction of motionblur. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wuxx0687/\+Desktop/csci3081/repo-\/group-\/\+C04/iteration3/src/lib/libimgtools/src/include/k\+\_\+motion\+\_\+blur.\+h\item 
+/home/wuxx0687/\+Desktop/csci3081/repo-\/group-\/\+C04/iteration3/src/lib/libimgtools/src/k\+\_\+motion\+\_\+blur.\+cc\end{DoxyCompactItemize}

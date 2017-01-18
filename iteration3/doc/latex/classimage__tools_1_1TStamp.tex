@@ -1,0 +1,101 @@
+\hypertarget{classimage__tools_1_1TStamp}{}\section{image\+\_\+tools\+:\+:T\+Stamp Class Reference}
+\label{classimage__tools_1_1TStamp}\index{image\+\_\+tools\+::\+T\+Stamp@{image\+\_\+tools\+::\+T\+Stamp}}
+
+
+A stamp tool that is meant to be applied in a \char`\"{}click\char`\"{} rather than a \char`\"{}click and drag\char`\"{} motion like all the other canvas tools. It can stamp images of any size onto the canvas. The stamp image must be explicitly set after initializing the stamp tool.  
+
+
+
+
+{\ttfamily \#include $<$t\+\_\+stamp.\+h$>$}
+
+
+
+Inherits \hyperlink{classimage__tools_1_1Tool}{image\+\_\+tools\+::\+Tool}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1TStamp_ac08d02caa080dc7b999a19792f6f7f9e}{T\+Stamp} ()\hypertarget{classimage__tools_1_1TStamp_ac08d02caa080dc7b999a19792f6f7f9e}{}\label{classimage__tools_1_1TStamp_ac08d02caa080dc7b999a19792f6f7f9e}
+
+\begin{DoxyCompactList}\small\item\em A constructor to construct \hyperlink{classimage__tools_1_1TChalk}{T\+Chalk}. \end{DoxyCompactList}\item 
+virtual \hyperlink{classimage__tools_1_1TStamp_a3d9cebfc900106a86856581af70307b9}{$\sim$\+T\+Stamp} ()\hypertarget{classimage__tools_1_1TStamp_a3d9cebfc900106a86856581af70307b9}{}\label{classimage__tools_1_1TStamp_a3d9cebfc900106a86856581af70307b9}
+
+\begin{DoxyCompactList}\small\item\em A destructor to destroy \hyperlink{classimage__tools_1_1TStamp}{T\+Stamp}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classimage__tools_1_1TStamp_a1a1dec7161830a68bdaefbc0ec567855}{name} ()\hypertarget{classimage__tools_1_1TStamp_a1a1dec7161830a68bdaefbc0ec567855}{}\label{classimage__tools_1_1TStamp_a1a1dec7161830a68bdaefbc0ec567855}
+
+\begin{DoxyCompactList}\small\item\em A constructor to construct \hyperlink{classimage__tools_1_1TSprayCan}{T\+Spray\+Can} and override the default mask in tool class. \end{DoxyCompactList}\item 
+int \hyperlink{classimage__tools_1_1TStamp_a8ca8765351ee8e42bd576cb360a51335}{width} ()\hypertarget{classimage__tools_1_1TStamp_a8ca8765351ee8e42bd576cb360a51335}{}\label{classimage__tools_1_1TStamp_a8ca8765351ee8e42bd576cb360a51335}
+
+\begin{DoxyCompactList}\small\item\em Get the width of the stamp getters and setters that depend on the stamp\+\_\+buffer\+\_\+ not being null. \end{DoxyCompactList}\item 
+int \hyperlink{classimage__tools_1_1TStamp_a553c39533c9fda20f0a1dcd2d4947ada}{height} ()\hypertarget{classimage__tools_1_1TStamp_a553c39533c9fda20f0a1dcd2d4947ada}{}\label{classimage__tools_1_1TStamp_a553c39533c9fda20f0a1dcd2d4947ada}
+
+\begin{DoxyCompactList}\small\item\em Get the height of the stamp getters and setters that depend on the stamp\+\_\+buffer\+\_\+ not being null. \end{DoxyCompactList}\item 
+void \hyperlink{classimage__tools_1_1TStamp_a8c75d539609e224340895bf7e28a246b}{set\+\_\+stamp\+\_\+buffer} (\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer)\hypertarget{classimage__tools_1_1TStamp_a8c75d539609e224340895bf7e28a246b}{}\label{classimage__tools_1_1TStamp_a8c75d539609e224340895bf7e28a246b}
+
+\begin{DoxyCompactList}\small\item\em Set the stamp\+\_\+buffer to buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1TStamp_a656bb0af6d8f5ad6994caac1cf33d562}{process\+\_\+pixel} (int mask\+\_\+x, int mask\+\_\+y, \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} tool\+\_\+color, \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer, int buffer\+\_\+x, int buffer\+\_\+y)
+\begin{DoxyCompactList}\small\item\em The definition of how tool will operate as a mask on the canvas when applied. \end{DoxyCompactList}\item 
+{\bfseries T\+Stamp} (const \hyperlink{classimage__tools_1_1TStamp}{T\+Stamp} \&rhs)=delete\hypertarget{classimage__tools_1_1TStamp_a86d6a6f4d87448aa40a15dfb739bc7ed}{}\label{classimage__tools_1_1TStamp_a86d6a6f4d87448aa40a15dfb739bc7ed}
+
+\item 
+\hyperlink{classimage__tools_1_1TStamp}{T\+Stamp} \& {\bfseries operator=} (const \hyperlink{classimage__tools_1_1TStamp}{T\+Stamp} \&rhs)=delete\hypertarget{classimage__tools_1_1TStamp_a30811bc3e0797e245cb668980bab288f}{}\label{classimage__tools_1_1TStamp_a30811bc3e0797e245cb668980bab288f}
+
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$ {\bfseries stamp\+\_\+buffer\+\_\+}\hypertarget{classimage__tools_1_1TStamp_a4a2d09261b405196933e80b0be51889e}{}\label{classimage__tools_1_1TStamp_a4a2d09261b405196933e80b0be51889e}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A stamp tool that is meant to be applied in a \char`\"{}click\char`\"{} rather than a \char`\"{}click and drag\char`\"{} motion like all the other canvas tools. It can stamp images of any size onto the canvas. The stamp image must be explicitly set after initializing the stamp tool. 
+
+\subsection{Member Function Documentation}
+\index{image\+\_\+tools\+::\+T\+Stamp@{image\+\_\+tools\+::\+T\+Stamp}!process\+\_\+pixel@{process\+\_\+pixel}}
+\index{process\+\_\+pixel@{process\+\_\+pixel}!image\+\_\+tools\+::\+T\+Stamp@{image\+\_\+tools\+::\+T\+Stamp}}
+\subsubsection[{\texorpdfstring{process\+\_\+pixel(int mask\+\_\+x, int mask\+\_\+y, Color\+Data tool\+\_\+color, Pixel\+Buffer $\ast$buffer, int buffer\+\_\+x, int buffer\+\_\+y)}{process_pixel(int mask_x, int mask_y, ColorData tool_color, PixelBuffer *buffer, int buffer_x, int buffer_y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color\+Data} image\+\_\+tools\+::\+T\+Stamp\+::process\+\_\+pixel (
+\begin{DoxyParamCaption}
+\item[{int}]{maskX, }
+\item[{int}]{maskY, }
+\item[{{\bf Color\+Data}}]{tool\+Color, }
+\item[{{\bf Pixel\+Buffer} $\ast$}]{buffer, }
+\item[{int}]{bufferX, }
+\item[{int}]{bufferY}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{classimage__tools_1_1TStamp_a656bb0af6d8f5ad6994caac1cf33d562}{}\label{classimage__tools_1_1TStamp_a656bb0af6d8f5ad6994caac1cf33d562}
+
+
+The definition of how tool will operate as a mask on the canvas when applied. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em maskX} & The X coordinate of the current mask location \\
+\hline
+\mbox{\tt in}  & {\em maskY} & The Y coordinate of the current mask location \\
+\hline
+\mbox{\tt in}  & {\em tool\+\_\+color} & The current color of the tool \\
+\hline
+ & {\em buffer} & The buffer of pixels to apply the tool to \\
+\hline
+\mbox{\tt in}  & {\em bufferX} & The X coordinate of the current buffer location \\
+\hline
+\mbox{\tt in}  & {\em bufferY} & The Y coordinate of the current buffer location \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classimage__tools_1_1Tool_a9e601f030f0956796810616445e395f0}{image\+\_\+tools\+::\+Tool}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wuxx0687/\+Desktop/csci3081/repo-\/group-\/\+C04/iteration3/src/lib/libimgtools/src/include/t\+\_\+stamp.\+h\item 
+/home/wuxx0687/\+Desktop/csci3081/repo-\/group-\/\+C04/iteration3/src/lib/libimgtools/src/t\+\_\+stamp.\+cc\end{DoxyCompactItemize}

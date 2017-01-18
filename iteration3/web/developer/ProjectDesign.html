@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title> Project Design </title>
+	<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+
+</head>
+<body>
+	<div class = "content">
+		<nav>
+			<a href ="../index.html" class = ""> Home</a> |
+			<a href = "../userpage.html" class = "link"> User Support </a> |
+			<a href = "../developerpage.html" class = "link"> Developer Support </a>
+		</nav>
+	</div>
+
+	<div class = "content">
+		<h1>Project Design</h1>
+		<h2>App</h2>
+		<img src="../img/app-module.png" class = "img" alt="app image">
+		<p>The overall structure of the application is as shown above. Both MIA and FlashPhoto share the same library for basic features.</p>
+		<h4>Medical Image Analysis</h4>
+		<p>
+			Medical image analysis, also known as the MIA, is a image processing application which is deisnged to have a GUI interface and a command line interface. The MIA contains several modules including mia_app, mia_app_cmd, mia_filter_manager, mia_io_manager,a tool_factory, and static library.
+		 <br></br>
+			Depending on the command line argument, either mia_app_cmd or mia_app will be executed for command line interface and GUI interface respectively. The GUI interface is implemented to take in various number of flags followed by parameters to apply filter, compare, or help operations. The command line parser is designed to be robust.  with several limitation that will be specified in later section. The gui interface is capable of performing filters operation as cmd interface does, but it is restricted to be a single image operation. One advantage of the command line interface is that it is able to perform filter on a sequence of images.
+			<br></br>s
+			The mia_io_manager in MIA application is extended and built upon the io_manager in static library libimgtools. More methods are added to achieve functionality such as loading previous or next images in a sequence.
+			<br></br>
+			mia_filter_manager is also extended from filter_manager in static library and it is used to initialize the gui interface. As MIA's gui interface is simplified, the mia_filter_manager is also heavily reduced.
+			<br></br>
+			tool_factory of MIA only contains two kinds of tools: pen and marker. Both of them are inherited from the static library.
+		</p>
+		<h4>Flashphoto</h4>
+		<p>
+			FlashPhoto is a more comprehensive image process application. It is only made of a gui interface but FlashPhoto is much more richer in variaty of tools compared to MIA application.
+			<br></br>
+			All functionalities of FlashPhoto is built upton the static library, which will be introduced in the next section.
+		</p>
+		<h2>libimgtools</h2>
+	 	<img src="../img/lib.png" class = "img" alt="lib image">
+	 	<p>The library that provide features for both MIA and FlashPhoto. The structure of libimgtools is as shown above.</p>
+		<h4>PixelBuffer and ColorData</h4>
+		<p>
+			ColorData data is the fundamental object of the image, each ColorData object represents a pixel and it is made of four parameters (red, green, blue and alpha). ColorData provides accesser and mutator API to higher level object.
+			<br></br>
+			PixelBuffer is a aggregation of ColorData, which overall represents the canvas. Canvas serves as a temporary memory buffer to hold an images when operation as performed on it.
+		</p>
+		<h4>FilterManager</h4>
+		<p>
+			FilterManager is meant to encapsulate nine kinds of filter operations and gui initialization. It interacts with FilterFactory, which holds all available filters and only grant one to filter manager at a time. Filters can be generailzied into convolution-based filter and pixel-independent filter based on the its mechanism. For convolution-based filters, it requires
+		</p>
+		<h4>IOManager</h4>
+		<p>
+			IOManager is mainly made of a png handler and jpg handler. This module will validate a image name to load the image into PixelBuffer or it will save the PixelBuffer into either jpg or png formats.
+		</p>
+		<h4>ToolFactory</h4>
+		<p>
+			ToolFactory is a collection of tools including pen, chalk, highlighter, stamp, etc. ToolFactory will be called in FilterManger in order to access a selected tool. There are eight kinds of tool available in ToolFactory and they are generalized into a filter class with shared attributes and behavior. 
+		</p>
+		<h4>StateManager</h4>
+		<p>
+			The purpose of state manager is to achieve redo/undo features by maintaining two state stack for redo and undo accordingly. When changes are made to canvas, the PixelBuffer without the newest changes will be pushed into the undo stacks, at the same time, the redo stack will be clean up. When undo is clicked, the PixelBuffer object on the top of stack will be popped from the undo stack and pushed into redo stacks.
+		</p>
+
+	</div>
+	<div class = "footer">
+		<span class="copyright">&copy; 2016, CSCI 3081 Shimao Hu/ Zixiang Ma/ Zhouman Wu/ Mingya Ma</span>
+	</div>
+
+
+</body>
+</html>

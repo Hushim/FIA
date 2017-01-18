@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title> Adding a New Tool </title> 
+	<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+
+</head>
+<body>
+	<div class = "content">
+		<nav>
+			<a href ="../index.html" class = ""> Home</a> |
+			<a href = "../userpage.html" class = "link"> User Support </a> |
+			<a href = "../developerpage.html" class = "link"> Developer Support </a>
+		</nav>
+	</div>
+
+	<div class = "content">
+		<h1>Adding a New Tool</h1>
+		<h3>Overview</h3>
+		<p>In FlashPhoto, there are two types of tools: Basic tools and Advance tools. Basic tools are normal painting tools like pen. Each tool has a mask that will determine how large your tool will draw in the canvas. Advance tool like Stamp can load image to canvas. To create a basic tool, two major parts of modifications should be made in order to implement the tool. One is in the Flashphoto and another is in the library <code>libimgtools</code>. In the following tutorial, we will guide you to create a special basic tool.</p>
+		
+		<h3>Adding a new Tool</h3>
+
+		<p><b>Add new tool to tool factory</b></p>
+		<ol>
+		
+		<li> Nagivate to the <code>libimgtools</code> directory and create new <code>t_special.cc</code> file and a <code>t_special.h</code> file in src/include directory.</li>
+		<li> In the <code>t_special.h</code>, include <code>tool.h</code> and the mask type that you choose for the new tool. Three types of masks(constant mask, oval mask, linear mask) are inherited from mask class. If the new tool has a different type of mask, you may inherite a new mask from mask class and modify the shape of this mask. In this example, we will use the constant mask with specific radius an opacity. Remember that the Mask object plays a vital role in this process.</li>
+		<pre><code>#include "include/tool.h"
+		<br>#include "include/m_constant.h"</code></pre>
+		<li>In <code>t_special.cc</code>, inherite this new tool from the tool class and override tool class's implementation to achieve the features of this new tool. You may take a look at the tool class when you override the implementation for more information. Following are functions you may need to override:
+		<pre><code>color_blend_math()</code></pre>
+		<pre><code>process_pixel()</code></pre>
+		<pre><code>ApplyToBuffer()</code></pre></li>
+		<li>In <code>tool_factory.h</code>, you need to increase number of the tools by one and add this new tool ID to the TOOLS enumerator in tool factory class</li>
+		<pre><code>class ToolFactory {
+ 		<br>  public:
+  		<br>    enum TOOLS {
+    	<br>	   TOOL_PEN = 0,
+    	<br>	   TOOL_ERASER = 1,
+		<br>	   ...
+		<br>	   TOOL_SPECIAL = 8;
+		<br>	   NUMTOOLS = 9
+  		<br>};
+		</code></pre>
+		<li>Add this new tool ID to the tool factory class in <code>tool_factory.cc</code></li>
+		<pre><code>Tool* ToolFactory::CreateTool(int toolID) {
+  		<br>	Tool* tool = NULL;
+  		<br>  	switch (toolID) {
+  		<br>		...
+    	<br>	  case TOOL_SPECIAL:
+      	<br>	    tool = new TSPECIAL();
+        <br>		break;
+        <br>		...
+        <br>}
+        </code></pre>
+        <p><b>Adding a new Glui </b></p>
+		<li>Within FlashPhoto's method <code>InitGlui</code>, a new panel will be created once we add the new tool to the tool factory and change the total number of tools.</li>
+		<pre><code>void FlashPhotoApp::InitGlui(void) {
+		<br>GLUI_Panel *toolPanel = new GLUI_Panel(glui(), "Tool Type");
+  		<br>{
+    	<br>    GLUI_RadioGroup *radio = new GLUI_RadioGroup(toolPanel, &cur_tool_,
+        <br>                                         UICtrl::UI_TOOLTYPE,
+        <br>                                         s_gluicallback);
+    	<br>	   for (int i = 0; i < ToolFactory::num_tools(); i++) {
+      	<br>               new GLUI_RadioButton(radio, tools_[i]->name().c_str());
+      	<br>    ...
+    	<br>}
+		</code></pre>
+		<p>Notice that this new tool is not specific for Flashphoto application, since it is created and wrapped in libimgtools.</p>
+		<p>Now you just successfully implemented a new tool and it's ready to go!</p>
+
+	</div>
+	<div class = "footer">
+		<span class="copyright">&copy; 2016, CSCI 3081 Shimao Hu/ Zixiang Ma/ Zhouman Wu/ Mingya Ma</span>
+	</div>
+
+
+</body>
+</html>

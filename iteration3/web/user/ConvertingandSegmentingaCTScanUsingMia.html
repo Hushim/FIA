@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title> Converting and Segmenting a CT Scan Using MIA </title> 
+	<link rel="stylesheet" type="text/css" href="../stylesheet.css">
+
+</head>
+<body>
+	<div class = "content">
+		<nav>
+			<a href ="../index.html" class = "link"> Home</a> |
+			<a href = "../userpage.html" class = "link"> User Support </a> |
+			<a href = "../developerpage.html" class = "link"> Developer Support </a>
+		</nav>
+	</div>
+
+	<div class = "content">
+		<h1> Converting and Segmenting a CT Scan Using MIA</h1>
+		<p> MIA can be used to perform batch operations on an entire directory of images. In this tutorial, you will learn how to convert a sequenced image stack saved as a set of numbered images in a directory to a quantized version that has 4 tissue types. Since MIA can be run in two modes: graphical mode or command line mode, we will provide both approaches on graphical mode and command line mode in this tutorial. Copy-and-paste commands will be provided as well. 
+		</p>
+		<h3>Graphical Approach</h3>
+		<p>Unfortunately, graphic mode doesn't support edit a list of sequenced images at a time. The following tutorial is to show how to edit and save an individual image under the current directory. You will have to redo this for each image you need to edit.
+		<p><b>Set up:</b></p>
+			<ol type="1">
+				<li>Open a new terminal window.</li>
+				<li>Use the built-in <code>cd </code> command to navigate to the directory that contains MIA. Use <code>ls</code> command to ensure that the source directory exists.</li>
+				    <ul>
+						<li>Under resources/test-images/brainstack directory, there are 99 images (mrbrain-8bit001.png - mrbrain-8bit099.png) which will serve as source images for this tutorial.</li>
+					</ul></li>
+				<li>Type the following command and press enter to run in graphic mode: 
+					<code>./MIA </code>
+					<p>Now the MIA window should be opened as below</p></li>
+			</ol>
+		<img src="../img/mia_main_window.png" class = "img" alt="MIA Main Window">
+		<p><b>Convert and Segment image:</b></p>
+		
+			<ol type="1">
+				<li>Doubld clicked to navigate to the directory <code>resources/test-images/brainstack</code> that contains source images using the right top I/O menu
+				<img src="../img/img_IO.png" class = "img" alt="MIA IO Menu"></li>
+				<li>Selected the image that need to be edited amd clicked <code>Load Canvas</code> button to load the specific image to canvas.
+				<img src="../img/original_img.png" class = "img" alt="load image"></li>
+				<li>Slightly blur the image to reduce noise by applying Blur filter. In this case, we reduce the amount of intensity to 3.0 from the default amount.
+				<img src="../img/apply_blur.png" class = "img" alt="blur image"></li>
+				<li>Apply Quantize filter to quantize the result into 4 segments.
+				<img src="../img/edited_img.png" class = "img" alt="edited image"></li>
+				<li>Rename the edited image and click the <code>Save Canvas</code> button to save the processed image into current directory.
+				<img src="../img/save_img.png" class = "img" alt="save image"></li>
+			</ol>
+		
+		<h3>Command Line Approach</h3>
+		<p><b>Set up:</b></p>
+			<ol type="1">
+				<li>Open a new terminal window.</li>
+				<li>Use the built-in <code>cd</code> command to navigate to the directory that contains MIA. Use <code>ls</code> command to ensure that the source directory exists.
+					<ul>
+						<li>Under resources/test-images/brainstack directory, there are 99 images (mrbrain-8bit001.png - mrbrain-8bit099.png) which will serve as source images for this tutorial.</li>
+					</ul></li>
+				<li>Copy the directory named brainstack that countains source images into the directory that contains MIA by using the following command:</li>
+				<code> cp -r ../../../resources/test-images/brainstack/ .</code>
+				<li>Create a new destination directory named processed_brainstack using the <code>mkdir</code> command. This is the dicrectory where the converted image will be saved. Following is the command line you will need:</li>
+				<code>mkdir processed_brainstack</code>
+			</ol>
+
+		<p><b>Convert and Batch image:</b></p>
+		<p>To convert and segment image, you need first slightly blur the image (to reduce noise), quantize the result into 4 segments, and then save the resulting images. To perform this converting and segmenting operation, please enter the following command:</p>
+		<code>./MIA brainstack/mrbrain-8bit###.png -blur 3.0 -quantize 4 processed_brainstack/edited_mrbrain-8bit###.png</code>
+		<img src="../img/demo.png" class = "img" alt="commanline">
+    	<ul>
+            <li>The argument <code>./MIA</code> specifies the MIA application.</li>
+            <li>The argument <code>brainstack/mrbrain-8bit###.png</code> indicates all unmodified sequenced source images under brainstack directory.</li>
+            <li>The argument <code>-blur</code> is the blur filter to be applied to slightly blur the image to reduce noise.</li>
+            <li>The argument <code>3.0</code> specifies the intensity of the filter.</li>
+            <li>The argument <code>-quantize</code> is the quantize filter to be applied. Quantize filter is used to reduce the number of possible colors by binning each color value into the number of bins specified.</li>
+            <li>The argument <code>4</code> specifies the intensity of the filter. In this case we need 4 tissue types.</li>
+            <li>The argument <code>processed_brainstack/edited_mrbrain-8bit###.png</code> indicates all edited images and the directory they should be saved in.</li>
+        </ul>
+
+        <p><b>Optional commands:</b></p>
+        <p>Between the input directory and the output directory, you can added any of the following comands to apply to that specific filter or to call helper screen:</p>
+        <span class = "command">
+			-h<br>
+			-sharpen &lt;float&gt; <br>
+			-edge <br>
+			-threshold &lt;float&gt; <br>
+			-quantize &lt;int&gt; <br>
+			-blur &lt;float&gt; <br>
+			-saturate &lt;float&gt; <br>
+			-channel &lt;float&gt; &lt;float&gt; &lt;float&gt; <br>
+			-compare
+        </span>
+
+		<p><b>Check processed images:</b> In the processed_brainstack directory, you will find a corresponding edited image for each image in brainstack: </p>
+		<img src="../img/edited_before.png" class = "img" alt="compare">
+
+	</div>
+	<div class = "footer">
+		<span class="copyright">&copy; 2016, CSCI 3081 Shimao Hu/ Zixiang Ma/ Zhouman Wu/ Mingya Ma</span>
+	</div>
+
+
+</body>
+</html>

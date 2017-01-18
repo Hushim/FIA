@@ -1,0 +1,112 @@
+\hypertarget{classimage__tools_1_1TBlur}{}\section{image\+\_\+tools\+:\+:T\+Blur Class Reference}
+\label{classimage__tools_1_1TBlur}\index{image\+\_\+tools\+::\+T\+Blur@{image\+\_\+tools\+::\+T\+Blur}}
+
+
+This tool serves as a mobile version of the blur filter, functions much like the spray can, except with blurring neighboring pixels rather than coloring them (linear falloff).  
+
+
+
+
+{\ttfamily \#include $<$t\+\_\+blur.\+h$>$}
+
+
+
+Inherits \hyperlink{classimage__tools_1_1Tool}{image\+\_\+tools\+::\+Tool}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1TBlur_ada06c0361bde7e6c0458efa248fe63a1}{T\+Blur} ()\hypertarget{classimage__tools_1_1TBlur_ada06c0361bde7e6c0458efa248fe63a1}{}\label{classimage__tools_1_1TBlur_ada06c0361bde7e6c0458efa248fe63a1}
+
+\begin{DoxyCompactList}\small\item\em A constructor to construct \hyperlink{classimage__tools_1_1TBlur}{T\+Blur}. \end{DoxyCompactList}\item 
+\hyperlink{classimage__tools_1_1TBlur_a6ff50f8d2fc47f1b12bf22b4015fcda2}{$\sim$\+T\+Blur} ()\hypertarget{classimage__tools_1_1TBlur_a6ff50f8d2fc47f1b12bf22b4015fcda2}{}\label{classimage__tools_1_1TBlur_a6ff50f8d2fc47f1b12bf22b4015fcda2}
+
+\begin{DoxyCompactList}\small\item\em A destructor to destroy \hyperlink{classimage__tools_1_1TBlur}{T\+Blur}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classimage__tools_1_1TBlur_a9277f8a68498ab7eb27977ae369d1c69}{name} ()
+\begin{DoxyCompactList}\small\item\em Get the name of the specific tool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries T\+Blur} (const \hyperlink{classimage__tools_1_1TBlur}{T\+Blur} \&rhs)=delete\hypertarget{classimage__tools_1_1TBlur_a5f9e4791a94be35cc27f3e242ce8b5db}{}\label{classimage__tools_1_1TBlur_a5f9e4791a94be35cc27f3e242ce8b5db}
+
+\item 
+\hyperlink{classimage__tools_1_1TBlur}{T\+Blur} \& {\bfseries operator=} (const \hyperlink{classimage__tools_1_1TBlur}{T\+Blur} \&rhs)=delete\hypertarget{classimage__tools_1_1TBlur_a3a6baeb4da03df232efbed9b2e2c8a03}{}\label{classimage__tools_1_1TBlur_a3a6baeb4da03df232efbed9b2e2c8a03}
+
+\item 
+\hyperlink{classimage__tools_1_1ColorData}{Color\+Data} \hyperlink{classimage__tools_1_1TBlur_ab3e88d9759fccf2ceb1c70a7c76c8dbc}{process\+\_\+pixel} (int mask\+\_\+x, int mask\+\_\+y, \hyperlink{classimage__tools_1_1ColorData}{Color\+Data} tool\+\_\+color, \hyperlink{classimage__tools_1_1PixelBuffer}{Pixel\+Buffer} $\ast$buffer, int buffer\+\_\+x, int buffer\+\_\+y)
+\begin{DoxyCompactList}\small\item\em The definition of how tool will operate as a mask on the canvas when applied. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classimage__tools_1_1Filter}{Filter} $\ast$ {\bfseries filter\+\_\+}\hypertarget{classimage__tools_1_1TBlur_a9e7607741d991f4e89c310c2a58af4dd}{}\label{classimage__tools_1_1TBlur_a9e7607741d991f4e89c310c2a58af4dd}
+
+\item 
+int {\bfseries size\+\_\+}\hypertarget{classimage__tools_1_1TBlur_a3a4d19930708958fe48ad468e97cda21}{}\label{classimage__tools_1_1TBlur_a3a4d19930708958fe48ad468e97cda21}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This tool serves as a mobile version of the blur filter, functions much like the spray can, except with blurring neighboring pixels rather than coloring them (linear falloff). 
+
+\subsection{Member Function Documentation}
+\index{image\+\_\+tools\+::\+T\+Blur@{image\+\_\+tools\+::\+T\+Blur}!name@{name}}
+\index{name@{name}!image\+\_\+tools\+::\+T\+Blur@{image\+\_\+tools\+::\+T\+Blur}}
+\subsubsection[{\texorpdfstring{name()}{name()}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string image\+\_\+tools\+::\+T\+Blur\+::name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classimage__tools_1_1TBlur_a9277f8a68498ab7eb27977ae369d1c69}{}\label{classimage__tools_1_1TBlur_a9277f8a68498ab7eb27977ae369d1c69}
+
+
+Get the name of the specific tool. 
+
+\begin{DoxyReturn}{Returns}
+the name of the specific tool 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classimage__tools_1_1Tool_a251c179e3ac9756d08fbcd082750f8a9}{image\+\_\+tools\+::\+Tool}.
+
+\index{image\+\_\+tools\+::\+T\+Blur@{image\+\_\+tools\+::\+T\+Blur}!process\+\_\+pixel@{process\+\_\+pixel}}
+\index{process\+\_\+pixel@{process\+\_\+pixel}!image\+\_\+tools\+::\+T\+Blur@{image\+\_\+tools\+::\+T\+Blur}}
+\subsubsection[{\texorpdfstring{process\+\_\+pixel(int mask\+\_\+x, int mask\+\_\+y, Color\+Data tool\+\_\+color, Pixel\+Buffer $\ast$buffer, int buffer\+\_\+x, int buffer\+\_\+y)}{process_pixel(int mask_x, int mask_y, ColorData tool_color, PixelBuffer *buffer, int buffer_x, int buffer_y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Color\+Data} image\+\_\+tools\+::\+T\+Blur\+::process\+\_\+pixel (
+\begin{DoxyParamCaption}
+\item[{int}]{maskX, }
+\item[{int}]{maskY, }
+\item[{{\bf Color\+Data}}]{tool\+Color, }
+\item[{{\bf Pixel\+Buffer} $\ast$}]{buffer, }
+\item[{int}]{bufferX, }
+\item[{int}]{bufferY}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{classimage__tools_1_1TBlur_ab3e88d9759fccf2ceb1c70a7c76c8dbc}{}\label{classimage__tools_1_1TBlur_ab3e88d9759fccf2ceb1c70a7c76c8dbc}
+
+
+The definition of how tool will operate as a mask on the canvas when applied. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em maskX} & The X coordinate of the current mask location \\
+\hline
+\mbox{\tt in}  & {\em maskY} & The Y coordinate of the current mask location \\
+\hline
+\mbox{\tt in}  & {\em tool\+\_\+color} & The current color of the tool \\
+\hline
+ & {\em buffer} & The buffer of pixels to apply the tool to \\
+\hline
+\mbox{\tt in}  & {\em bufferX} & The X coordinate of the current buffer location \\
+\hline
+\mbox{\tt in}  & {\em bufferY} & The Y coordinate of the current buffer location \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classimage__tools_1_1Tool_a9e601f030f0956796810616445e395f0}{image\+\_\+tools\+::\+Tool}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/wuxx0687/\+Desktop/csci3081/repo-\/group-\/\+C04/iteration3/src/lib/libimgtools/src/include/t\+\_\+blur.\+h\item 
+/home/wuxx0687/\+Desktop/csci3081/repo-\/group-\/\+C04/iteration3/src/lib/libimgtools/src/t\+\_\+blur.\+cc\end{DoxyCompactItemize}
